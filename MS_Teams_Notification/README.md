@@ -56,9 +56,7 @@ You need to create a media type as follows:
 * **Type**: Script
 * **Script name**: slack.sh
 
-...and ensure that it is enabled before clicking "Save", like so:
-
-![Zabbix Media Type](https://pictures.ericoc.com/github/zabbix-mediatype.png "Zabbix Media Type")
+...and ensure that it is enabled before clicking "Save".
 
 However, on Zabbix 3.x and greater, media types are configured slightly differently and you must explicity define the parameters sent to the `slack.sh` script. On Zabbix 3.x, three script parameters should be added as follows:
 
@@ -66,9 +64,7 @@ However, on Zabbix 3.x and greater, media types are configured slightly differen
 * `{ALERT.SUBJECT}`
 * `{ALERT.MESSAGE}`
 
-...as shown here:
-
-![Zabbix 3.x Media Type](https://pictures.ericoc.com/github/zabbix3-mediatype.png "Zabbix 3.x Media Type")
+![Image of MS Teams Webhook](https://raw.githubusercontent.com/TheMadVanguard/Zabbix/master/MS_Teams_Notification/Images/Zabbix%20Media%20Types.PNG)
 
 Then, create a "Slack" user on the "Users" sub-tab of the "Administration" tab within the Zabbix servers web interface and specify this users "Media" as the "Slack" media type that was just created with the Slack.com channel ("#alerts" in the example) or user name (such as "@ericoc") that you want messages to go to in the "Send to" field as seen below:
 
