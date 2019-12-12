@@ -44,6 +44,7 @@ An incoming web-hook integration must be created within your Teams account:
 
 https://msdn.microsoft.com/en-us/microsoft-teams/connectors
 
+![Image of MS Teams Webhook](https://raw.githubusercontent.com/TheMadVanguard/Zabbix/master/MS_Teams_Notification/Images/Teams%20Webhook.png)
 
 ### Within the Zabbix web interface (definitely this is out of data and talking about slack rather than MS teams)
 
