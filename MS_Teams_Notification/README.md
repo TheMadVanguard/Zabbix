@@ -19,7 +19,7 @@ This works with Zabbix 1.8.x or greater - including 2.2, 2.4 and 3.x!
 * [Hiromu Yakura](https://github.com/hiromu) for escaping quotation marks in the fields received from Zabbix to have valid JSON!
 * [Devlin Gonçalves](https://github.com/devlinrcg), [tkdywc](https://github.com/tkdywc), [damaarten](https://github.com/damaarten), and [lunchables](https://github.com/lunchables) for Zabbix 3.0 AlertScript documentation, suggestions and testing!
 
-Installation (work in progress changing terminology and proceedures from slack instructions)
+Installation
 ------------
 
 ### The script itself
@@ -46,7 +46,7 @@ https://msdn.microsoft.com/en-us/microsoft-teams/connectors
 
 ![Image of MS Teams Webhook](https://raw.githubusercontent.com/TheMadVanguard/Zabbix/master/MS_Teams_Notification/Images/Teams%20Webhook.png)
 
-### Within the Zabbix web interface (definitely this is out of data and talking about slack rather than MS teams)
+### Within the Zabbix web interface
 
 When logged in to the Zabbix servers web interface with super-administrator privileges, navigate to the "Administration" tab, access the "Media Types" sub-tab, and click the "Create media type" button.
 
@@ -58,19 +58,19 @@ You need to create a media type as follows:
 
 ...and ensure that it is enabled before clicking "Save".
 
-However, on Zabbix 3.x and greater, media types are configured slightly differently and you must explicity define the parameters sent to the `slack.sh` script. On Zabbix 3.x, three script parameters should be added as follows:
+However, on Zabbix 3.x and greater, media types are configured slightly differently and you must explicity define the parameters sent to the `team.sh` script. On Zabbix 3.x, three script parameters should be added as follows:
 
 * `{ALERT.SENDTO}`
 * `{ALERT.SUBJECT}`
 * `{ALERT.MESSAGE}`
 
-![Image of MS Teams Webhook](https://raw.githubusercontent.com/TheMadVanguard/Zabbix/master/MS_Teams_Notification/Images/Zabbix%20Media%20Types.PNG)
+![Image Zabbix Media Type](https://raw.githubusercontent.com/TheMadVanguard/Zabbix/master/MS_Teams_Notification/Images/Zabbix%20Media%20Types.PNG)
 
-Then, create a "Microsfot Teams" user on the "Users" sub-tab of the "Administration" tab within the Zabbix servers web interface and specify this users "Media" as the "Microsoft Teams" media type that was just created with the Microsoft Teams channel ("#Zabbix" in the example) or user name (such as "@TheMadVanguard") that you want messages to go to in the "Send to" field as seen below:
+Then, create a "Microsoft Teams" user on the "Users" sub-tab of the "Administration" tab within the Zabbix servers web interface and specify this users "Media" as the "Microsoft Teams" media type that was just created with the Microsoft Teams channel ("#Zabbix" in the example) or user name (such as "@TheMadVanguard") that you want messages to go to in the "Send to" field as seen below:
 
-![Zabbix User](https://pictures.ericoc.com/github/zabbix-user.png "Zabbix User")
+![Image of Zabbix Media User](https://raw.githubusercontent.com/TheMadVanguard/Zabbix/master/MS_Teams_Notification/Images/Zabbix%20Media%20User.png)
 
-Finally, an action can then be created on the "Actions" sub-tab of the "Configuration" tab within the Zabbix servers web interface to notify the Zabbix "Slack" user ensuring that the "Subject" is "PROBLEM" for "Default message" and "RECOVERY" should you choose to send a "Recovery message".
+Finally, an action can then be created on the "Actions" sub-tab of the "Configuration" tab within the Zabbix servers web interface to notify the Zabbix "Microsoft Teams" user ensuring that the "Subject" is "PROBLEM" for "Default message" and "RECOVERY" should you choose to send a "Recovery message".
 
 Keeping the messages short is probably a good idea; use something such as the following for the contents of each message:
 
