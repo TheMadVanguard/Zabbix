@@ -64,11 +64,11 @@ However, on Zabbix 3.x and greater, media types are configured slightly differen
 * `{ALERT.SUBJECT}`
 * `{ALERT.MESSAGE}`
 
-![Image of MS Teams Webhook](https://raw.githubusercontent.com/TheMadVanguard/Zabbix/master/MS_Teams_Notification/Images/Zabbix%20Media%20Types.PNG)
+![Image Zabbix Media Type](https://raw.githubusercontent.com/TheMadVanguard/Zabbix/master/MS_Teams_Notification/Images/Zabbix%20Media%20Types.PNG)
 
-Then, create a "Microsfot Teams" user on the "Users" sub-tab of the "Administration" tab within the Zabbix servers web interface and specify this users "Media" as the "Microsoft Teams" media type that was just created with the Microsoft Teams channel ("#Zabbix" in the example) or user name (such as "@TheMadVanguard") that you want messages to go to in the "Send to" field as seen below:
+Then, create a "Microsoft Teams" user on the "Users" sub-tab of the "Administration" tab within the Zabbix servers web interface and specify this users "Media" as the "Microsoft Teams" media type that was just created with the Microsoft Teams channel ("#Zabbix" in the example) or user name (such as "@TheMadVanguard") that you want messages to go to in the "Send to" field as seen below:
 
-![Zabbix User](https://pictures.ericoc.com/github/zabbix-user.png "Zabbix User")
+![Image of Zabbix Media User](https://raw.githubusercontent.com/TheMadVanguard/Zabbix/master/MS_Teams_Notification/Images/Zabbix%20Media%20User.png)
 
 Finally, an action can then be created on the "Actions" sub-tab of the "Configuration" tab within the Zabbix servers web interface to notify the Zabbix "Slack" user ensuring that the "Subject" is "PROBLEM" for "Default message" and "RECOVERY" should you choose to send a "Recovery message".
 
