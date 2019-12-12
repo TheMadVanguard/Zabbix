@@ -8,7 +8,7 @@ This is simply a Bash script that uses the custom alert script functionality wit
 It is heavily based on the previous Zabbix Slack alert script here: https://github.com/ericoc/zabbix-slack-alertscript
 
 #### Versions
-This works with Zabbix 1.8.x or greater - including 2.2, 2.4 and 3.x!
+This works with Zabbix 1.8.x or greater - including 2.2, 2.4, 3.x and 4.4!
 
 #### Huge thanks and appreciation to:
 
@@ -76,17 +76,15 @@ Keeping the messages short is probably a good idea; use something such as the fo
 
 	{TRIGGER.NAME} - {HOSTNAME} ({IPADDRESS})
 
-Additionally, you can have multiple different Zabbix users each with "Slack" media types that notify unique Slack users or channels upon different triggered Zabbix actions.
+Additionally, you can have multiple different Zabbix users each with "Teams" media types that notify unique Teams users or channels upon different triggered Zabbix actions.
 
 If you are interesting in longer notification messages (with line breaks for example), you may want to reference [this pull request](https://github.com/ericoc/zabbix-slack-alertscript/pull/16) or [any number of forks of this repository](https://github.com/ericoc/zabbix-slack-alertscript/network).
 
 Testing
 -------
-Assuming that you have set a valid Slack web-hook URL within your "team.sh" file, you can execute the script manually (as opposed to via Zabbix) from Bash on a terminal:
+Assuming that you have set a valid Teams web-hook URL within your "teams.sh" file, you can execute the script manually (as opposed to via Zabbix) from Bash on a terminal:
 
-	$ bash teams.sh '@ericoc' PROBLEM 'Oh no! Something is wrong!'
-
-Alerting a specific user name results in the message actually coming from the "slackbot" user using a sort-of "spoofed" user name within the message. A channel alert is sent as you would normally expect from whatever user name you specify in "slack.sh":
+	$ bash teams.sh '#Zabbix' PROBLEM 'Oh no! Something is wrong!'
 
 ![Zabbix Media Test](https://raw.githubusercontent.com/TheMadVanguard/Zabbix/master/MS_Teams_Notification/Images/Zabbix%20Media%20Test.png)
 ![Zabbix Media Test](https://raw.githubusercontent.com/TheMadVanguard/Zabbix/master/MS_Teams_Notification/Images/Teams%20Test.png)
