@@ -52,9 +52,9 @@ When logged in to the Zabbix servers web interface with super-administrator priv
 
 You need to create a media type as follows:
 
-* **Name**: Slack
+* **Name**: Microsoft Teams
 * **Type**: Script
-* **Script name**: slack.sh
+* **Script name**: teams.sh
 
 ...and ensure that it is enabled before clicking "Save".
 
@@ -66,7 +66,7 @@ However, on Zabbix 3.x and greater, media types are configured slightly differen
 
 ![Image of MS Teams Webhook](https://raw.githubusercontent.com/TheMadVanguard/Zabbix/master/MS_Teams_Notification/Images/Zabbix%20Media%20Types.PNG)
 
-Then, create a "Slack" user on the "Users" sub-tab of the "Administration" tab within the Zabbix servers web interface and specify this users "Media" as the "Slack" media type that was just created with the Slack.com channel ("#alerts" in the example) or user name (such as "@ericoc") that you want messages to go to in the "Send to" field as seen below:
+Then, create a "Microsfot Teams" user on the "Users" sub-tab of the "Administration" tab within the Zabbix servers web interface and specify this users "Media" as the "Microsoft Teams" media type that was just created with the Microsoft Teams channel ("#Zabbix" in the example) or user name (such as "@TheMadVanguard") that you want messages to go to in the "Send to" field as seen below:
 
 ![Zabbix User](https://pictures.ericoc.com/github/zabbix-user.png "Zabbix User")
 
