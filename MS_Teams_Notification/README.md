@@ -82,14 +82,14 @@ If you are interesting in longer notification messages (with line breaks for exa
 
 Testing
 -------
-Assuming that you have set a valid Slack web-hook URL within your "slack.sh" file, you can execute the script manually (as opposed to via Zabbix) from Bash on a terminal:
+Assuming that you have set a valid Slack web-hook URL within your "team.sh" file, you can execute the script manually (as opposed to via Zabbix) from Bash on a terminal:
 
-	$ bash slack.sh '@ericoc' PROBLEM 'Oh no! Something is wrong!'
+	$ bash teams.sh '@ericoc' PROBLEM 'Oh no! Something is wrong!'
 
 Alerting a specific user name results in the message actually coming from the "slackbot" user using a sort-of "spoofed" user name within the message. A channel alert is sent as you would normally expect from whatever user name you specify in "slack.sh":
 
-![Slack Testing](https://pictures.ericoc.com/github/slack-example.png "Slack Testing")
-
+![Zabbix Media Test](https://raw.githubusercontent.com/TheMadVanguard/Zabbix/master/MS_Teams_Notification/Images/Zabbix%20Media%20Test.png)
+![Zabbix Media Test](https://raw.githubusercontent.com/TheMadVanguard/Zabbix/master/MS_Teams_Notification/Images/Teams%20Test.png)
 
 More Information
 ----------------
